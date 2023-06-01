@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "977106733694",
+    "firebase_url": "https://online-lab-d80d4-default-rtdb.firebaseio.com",
+    "project_id": "online-lab-d80d4",
+    "storage_bucket": "online-lab-d80d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977106733694:android:002316f727957d63f5262f",
+        "android_client_info": {
+          "package_name": "com.edasinar.online_lab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977106733694-te03e5nf34jg5622g9hu88pi2os6dq7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttRu453XxUnMGvksJ9UaXVv-Ryd3s8l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977106733694-te03e5nf34jg5622g9hu88pi2os6dq7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977106733694:android:dd008436c1a1f83ef5262f",
+        "android_client_info": {
+          "package_name": "com.edasinar.onlinelabteachermobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977106733694-te03e5nf34jg5622g9hu88pi2os6dq7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttRu453XxUnMGvksJ9UaXVv-Ryd3s8l4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977106733694-te03e5nf34jg5622g9hu88pi2os6dq7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
