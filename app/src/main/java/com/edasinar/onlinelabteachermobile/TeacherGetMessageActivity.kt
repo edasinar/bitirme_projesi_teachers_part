@@ -1,9 +1,12 @@
 package com.edasinar.onlinelabteachermobile
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import com.edasinar.model.MessageInfo
 import com.edasinar.onlinelabteachermobile.databinding.ActivityTeacherGetMessageBinding
 
@@ -22,6 +25,8 @@ class TeacherGetMessageActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        actionBarColor()
+        supportActionBar!!.title = "MESAJ DETAYI"
 
         messageInfo = intent.getParcelableExtra<MessageInfo>("message")!!
 
@@ -29,6 +34,12 @@ class TeacherGetMessageActivity : AppCompatActivity() {
         binding.teacherGetQuestionBody.text = messageInfo.messageBody
         studentEmail = messageInfo.email
         questionLabel = messageInfo.messageLabel
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     fun replyMessage(view: View) {

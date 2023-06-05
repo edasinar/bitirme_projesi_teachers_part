@@ -1,7 +1,10 @@
 package com.edasinar.onlinelabteachermobile
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.GridLayoutManager
 import com.edasinar.model.MessageInfo
 import com.edasinar.model.TeacherMessageInfo
@@ -24,6 +27,10 @@ class TeacherMessagesActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+
+        actionBarColor()
+        supportActionBar!!.title = "MESAJLARIM"
+
         auth = Firebase.auth
         firestore = Firebase.firestore
 
@@ -34,6 +41,12 @@ class TeacherMessagesActivity : AppCompatActivity() {
             binding.teacherRecyclerView.layoutManager = layoutManager
             binding.teacherRecyclerView.adapter = adapter
         }
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     private fun getCurrentUserMessagesFromFirestore(callback: (ArrayList<MessageInfo>) -> Unit) {

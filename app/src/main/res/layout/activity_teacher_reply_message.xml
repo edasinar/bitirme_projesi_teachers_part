@@ -6,24 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".TeacherReplyMessageActivity">
 
-    <EditText
-        android:id="@+id/teacherReplyMessageBody"
-        android:layout_width="350dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bodyInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="320dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="sorunun cevabını buraya yazın..."
-        android:inputType="textMultiLine"
-        android:minHeight="48dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="108dp"
+        app:helperText="Gerekli*"
+        app:helperTextTextColor="#a50000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teacherReplyMessageLabel" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/teacherReplyMessageBody"
+            android:layout_width="320dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="59dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="mesajınızı yazın..."
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/teacherReplyMessageLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/text_label"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:text="Soru Başlığı"
@@ -37,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/button_color"
         android:text="Dosya Seç"
         android:onClick="uploadFile"
         app:layout_constraintBottom_toTopOf="@+id/teacherSendMessageButton"
@@ -48,6 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginBottom="56dp"
+        android:backgroundTint="@color/button_color"
         android:text="Mesajı Gönder"
         android:onClick="sendMessageToStudent"
         app:layout_constraintBottom_toBottomOf="parent"

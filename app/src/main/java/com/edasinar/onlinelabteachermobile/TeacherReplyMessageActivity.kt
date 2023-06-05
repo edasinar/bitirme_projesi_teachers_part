@@ -2,11 +2,14 @@ package com.edasinar.onlinelabteachermobile
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.edasinar.model.TeacherMessageInfo
@@ -46,6 +49,9 @@ class TeacherReplyMessageActivity : AppCompatActivity() {
         firestore = Firebase.firestore
         storage = Firebase.storage
 
+        actionBarColor()
+        supportActionBar!!.title = "MESAJ CEVAPLAMA"
+
         val bundle = intent.extras
         if (bundle != null) {
             email = bundle.getString("email").toString()
@@ -54,6 +60,12 @@ class TeacherReplyMessageActivity : AppCompatActivity() {
         binding.teacherReplyMessageLabel.text = label
         println("reply activity öğrenci emaili: $email" )
 
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     @Deprecated("Deprecated in Java")

@@ -3,11 +3,14 @@ package com.edasinar.onlinelabteachermobile
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -45,6 +48,9 @@ class TeacherFileUploadActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        actionBarColor()
+        supportActionBar!!.title = "KAYNAK YÜKLEME"
+
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
@@ -55,6 +61,12 @@ class TeacherFileUploadActivity : AppCompatActivity() {
         binding.saveDocsToNotesButton.setOnClickListener {
             uploadNotesFromFirestore(downloadUrl)
         }
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     @Deprecated("Deprecated in Java")

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/activity_background"
     tools:context=".TeacherFileUploadActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="72dp"
+        android:textColor="@color/text_label"
         android:text="DERSLER"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/saveVideosToLessonButton"
@@ -35,6 +37,7 @@
         android:layout_marginTop="152dp"
         android:onClick="uploadFileFromPhone"
         android:text="Dosya Seç"
+        android:backgroundTint="@color/button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="72dp"
+
+        android:textColor="@color/text_label"
         android:text="NOTLAR"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/saveDocsToNotesButton"
@@ -57,6 +62,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="36dp"
         android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/button_color"
         android:text="Ders Yükle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,6 +73,7 @@
         android:layout_height="48dp"
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="112dp"
+        android:backgroundTint="@color/button_color"
         android:text="Not Yükle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -86,6 +93,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/text_label"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Ders Videosu - Not Dökümanı"

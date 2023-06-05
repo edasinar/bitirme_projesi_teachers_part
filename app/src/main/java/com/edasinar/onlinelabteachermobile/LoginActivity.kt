@@ -1,10 +1,13 @@
 package com.edasinar.onlinelabteachermobile
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.edasinar.onlinelabteachermobile.databinding.ActivityLoginBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
@@ -26,12 +29,22 @@ class LoginActivity : AppCompatActivity() {
         setContentView(view)
         auth = FirebaseAuth.getInstance()
         firestore = Firebase.firestore
+
+        actionBarColor()
+        supportActionBar!!.title = "GİRİŞ YAP"
+
         val user = auth.currentUser
         if (user != null) {
             val intent = Intent(this@LoginActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     fun register(view: View?) {

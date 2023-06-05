@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="125dp"
     android:layout_gravity="center"
     android:layout_margin="5dp"
     app:cardCornerRadius="5dp"
@@ -13,6 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/card_background"
         android:orientation="vertical">
 
         <ImageView
@@ -20,13 +21,15 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@drawable/kimya" />
 
         <TextView
             android:id="@+id/titleName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="online lab"
+            android:textSize="20dp"
+            android:textColor="@color/black"
             android:textAlignment="center" />
 
     </LinearLayout>

@@ -1,9 +1,12 @@
 package com.edasinar.onlinelabteachermobile
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.ActionBar
 import com.edasinar.onlinelabteachermobile.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -22,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        actionBarColor()
+        supportActionBar!!.title = "ANA SAYFA"
+
         binding.teacherMessages.setOnClickListener {
             val intent = Intent(this, TeacherMessagesActivity::class.java)
             startActivity(intent)
@@ -31,6 +37,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TeacherFileUploadActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun actionBarColor() {
+        val actionBar: ActionBar? = supportActionBar
+        val colorDrawable = ColorDrawable(Color.parseColor("#000066"))
+        actionBar?.setBackgroundDrawable(colorDrawable)
     }
 
     fun logout(view: View) {
